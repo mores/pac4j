@@ -51,7 +51,15 @@ public class DefaultAjaxRequestResolver implements AjaxRequestResolver, HttpCons
         }
 
         val webContext = ctx.webContext();
-        if (webContext.getRequestParameter(FACES_PARTIAL_AJAX_PARAMETER).isEmpty()) {
+        boolean javaxFaces = false;
+        if (!webContext.getRequestParameter(JAVAX_FACES_PARTIAL_AJAX_PARAMETER).isEmpty()) {
+            javaxFaces = true;
+        }
+        boolean jakartaFaces = false;
+        if (!webContext.getRequestParameter(JAKARTA_FACES_PARTIAL_AJAX_PARAMETER).isEmpty()) {
+            jakartaFaces = true;
+        }
+        if (!javaxFaces && !jakartaFaces) {
             if (StringUtils.isNotBlank(url)) {
                 webContext.setResponseHeader(HttpConstants.LOCATION_HEADER, url);
             }

@@ -92,8 +92,11 @@ public interface HttpConstants {
     /** Constant <code>AJAX_HEADER_NAME="X-Requested-With"</code> */
     String AJAX_HEADER_NAME = "X-Requested-With";
 
-    /** Constant <code>FACES_PARTIAL_AJAX_PARAMETER="javax.faces.partial.ajax"</code> */
-    String FACES_PARTIAL_AJAX_PARAMETER = "javax.faces.partial.ajax";
+    /** Constant <code>JAVAX_FACES_PARTIAL_AJAX_PARAMETER="javax.faces.partial.ajax"</code> */
+    String JAVAX_FACES_PARTIAL_AJAX_PARAMETER = "javax.faces.partial.ajax";
+
+    /** Constant <code>JAKARTA_FACES_PARTIAL_AJAX_PARAMETER="jakarta.faces.partial.ajax"</code> */
+    String JAKARTA_FACES_PARTIAL_AJAX_PARAMETER = "jakarta.faces.partial.ajax";
 
     enum HTTP_METHOD { GET, POST, HEAD, TRACE, PUT, DELETE, OPTIONS, PATCH }
 
